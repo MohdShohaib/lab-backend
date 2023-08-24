@@ -17,7 +17,7 @@ const database ='MadPharma';
 const connectToMongo = async () => {
     try{ 
         mongoose.set("strictQuery", false);
-        await mongoose.connect(`mongodb+srv://soyamali406:bVXLUqH6PcbH5iqo@cluster0.648cy9h.mongodb.net/`);
+        await mongoose.connect(`mongodb://${server}/${database}`);
         console.log("connected to mongo succesfully");
     } catch (err){
         console.log('Failled connected to mongodb', err);
